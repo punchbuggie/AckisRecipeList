@@ -1,0 +1,1919 @@
+------------------------------------------------------------------------
+r2052 | ackis | 2009-06-08 17:01:51 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   A /tags/1.0RC9 (from /trunk:2051)
+
+Tagging as RC9 to fix a bug w/ older version and libraries.
+------------------------------------------------------------------------
+r2051 | ackis | 2009-06-08 17:01:20 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.toc
+
+Tweak to the ToC.
+------------------------------------------------------------------------
+r2050 | ackis | 2009-06-08 16:58:23 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testenUS.lua
+
+Add missing local entry to testenUS.lua, also cause localization app to update.
+------------------------------------------------------------------------
+r2049 | ackis | 2009-06-08 16:52:00 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLConfig.lua
+   M /trunk/ARLDatamine.lua
+   M /trunk/AckisRecipeList.lua
+   M /trunk/Locals/testenUS.lua
+
+Add gui elements for the datamining objects.  Also add an auto-vendor scan option.
+------------------------------------------------------------------------
+r2048 | ackis | 2009-06-08 15:39:32 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+If we're scanning a spell and then it's associated item, don't override the flag database, we use the same one to get proper binding information and faction information.
+------------------------------------------------------------------------
+r2047 | ackis | 2009-06-08 15:32:28 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add more luadocs for the dataminer.
+------------------------------------------------------------------------
+r2046 | ackis | 2009-06-08 15:26:16 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Clean up some luadocs.
+------------------------------------------------------------------------
+r2045 | pompachomp | 2009-06-08 05:36:06 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Cook.lua
+   M /trunk/RecipeDB/ARL-Quest.lua
+
+fixed acquire data for Kungaloosh
+------------------------------------------------------------------------
+r2044 | torhal | 2009-06-08 05:08:03 +0000 (Mon, 08 Jun 2009) | 4 lines
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Moved addon:GetKnownProfessions() and addon:GetTradeSpecialty() to local functions within a do block.
+Changed addon:PopulateRepFilters() to a local function.
+More table re-use, and some variable renames for readability.
+
+------------------------------------------------------------------------
+r2043 | torhal | 2009-06-08 05:02:58 +0000 (Mon, 08 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Moved addon:SortMissingRecipes() to here from AckisRecipeList.lua, and made it a local function.
+
+------------------------------------------------------------------------
+r2042 | ackis | 2009-06-08 03:35:32 +0000 (Mon, 08 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Quest.lua
+
+add quest 12645 back.
+------------------------------------------------------------------------
+r2041 | torhal | 2009-06-08 02:39:57 +0000 (Mon, 08 Jun 2009) | 5 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+In CreateReverseLookup(): Re-use the table we return.
+In addon:ScanTrainerData(): Re-use teach and noteach tables.
+In addon:ScanToolTip(): Remove confirmed_role, as it was never used. Now sets scan_data.found_class when a class string is found.
+In addon:PrintScanResults(): Added flag descriptions for "Vendor" and "PvP". Replaced multiple class checks with a check for scan_data.found_class before checking flags. Re-worked logic and display behind extra class flag output for recipes which are not class-specific.
+
+------------------------------------------------------------------------
+r2040 | pompachomp | 2009-06-07 23:40:17 +0000 (Sun, 07 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Quest.lua
+
+fixed a bunch of quest data
+------------------------------------------------------------------------
+r2039 | pompachomp | 2009-06-07 09:32:23 +0000 (Sun, 07 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Quest.lua
+
+fixed some quest data.
+------------------------------------------------------------------------
+r2038 | torhal | 2009-06-07 06:28:50 +0000 (Sun, 07 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Quest.lua
+
+Updated questgiver coordinates for Horde version of "Soothing Turtle Bisque".
+
+------------------------------------------------------------------------
+r2037 | torhal | 2009-06-07 05:00:07 +0000 (Sun, 07 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Trainer.lua
+
+Updated coordinates for Slagg in Arathi Highlands.
+
+------------------------------------------------------------------------
+r2036 | ackis | 2009-06-07 04:52:35 +0000 (Sun, 07 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Make the profession scan work w/ prof IDs.
+------------------------------------------------------------------------
+r2035 | torhal | 2009-06-07 04:44:16 +0000 (Sun, 07 Jun 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+   M /trunk/RecipeDB/ARL-Vendor.lua
+
+Missing/extra flags in tooltip scan will now print in numeric order.
+Updated coordinates for Andrew Hilbert in Silverpine.
+
+------------------------------------------------------------------------
+r2034 | pompachomp | 2009-06-07 03:02:05 +0000 (Sun, 07 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testenUS.lua
+   M /trunk/RecipeDB/ARL-FirstAid.lua
+
+added a custom string.
+------------------------------------------------------------------------
+r2033 | torhal | 2009-06-07 02:58:12 +0000 (Sun, 07 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Completely reworked tooltip-scanning.
+
+------------------------------------------------------------------------
+r2032 | pompachomp | 2009-06-07 01:24:56 +0000 (Sun, 07 Jun 2009) | 5 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+added missing Engineering trainer data, Ticket 631
+added missing Blacksmithing trainer data, Ticket 634
+added missing Jewelcrafting trainer data, Ticket 629
+added missing Tailoring trainer data, Ticket 630
+
+------------------------------------------------------------------------
+r2031 | pompachomp | 2009-06-06 21:59:43 +0000 (Sat, 06 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Quest.lua
+
+fixed faction id's for a couple quests
+------------------------------------------------------------------------
+r2030 | torhal | 2009-06-06 21:57:56 +0000 (Sat, 06 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In GenerateTooltipContent(): Added checks for opposing faction vendors to display that fact rather than having an empty "Obtained From" section.
+
+------------------------------------------------------------------------
+r2029 | Jim-Bim | 2009-06-06 11:07:36 +0000 (Sat, 06 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+AckisRecipeList:
+- fixed a bunch of syntax errors torhal missed
+------------------------------------------------------------------------
+r2028 | torhal | 2009-06-06 06:26:52 +0000 (Sat, 06 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Hopefully subverted Ackis' copypasta massacre.
+------------------------------------------------------------------------
+r2027 | pompachomp | 2009-06-06 01:41:28 +0000 (Sat, 06 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Trainer.lua
+   M /trunk/RecipeDB/ARL-Vendor.lua
+
+added a first aid trainer into the trainerdb and removed from the vendordb
+------------------------------------------------------------------------
+r2026 | pompachomp | 2009-06-05 23:57:49 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-FirstAid.lua
+
+removed obsolete acquire information for some first aid items.
+------------------------------------------------------------------------
+r2025 | BWMerlin | 2009-06-05 23:12:33 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-FirstAid.lua
+
+Fixed typo :S
+------------------------------------------------------------------------
+r2024 | BWMerlin | 2009-06-05 23:04:49 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-FirstAid.lua
+
+Fixed ticket 637 (I hope) :)
+------------------------------------------------------------------------
+r2023 | pompachomp | 2009-06-05 22:52:49 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Smelt.lua
+
+added missing Mining trainer data, Ticket 633
+------------------------------------------------------------------------
+r2022 | ackis | 2009-06-05 20:28:14 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/ARLDatamine.lua
+
+Fix compilation errors, is the luac -p script still being run on commits?
+------------------------------------------------------------------------
+r2021 | ackis | 2009-06-05 18:46:43 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+rework tooltip scanning, not done, can't work on it anymore right now, it's not in a working state.
+------------------------------------------------------------------------
+r2020 | ackis | 2009-06-05 17:16:17 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Some debug output.
+------------------------------------------------------------------------
+r2019 | ackis | 2009-06-05 16:57:52 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Convert table from item id -> spell id
+------------------------------------------------------------------------
+r2018 | ackis | 2009-06-05 16:30:51 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Scan the recipe itself when doing a specific item scan.
+------------------------------------------------------------------------
+r2017 | ackis | 2009-06-05 16:24:45 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+   M /trunk/AckisRecipeList.lua
+
+Lets hide the no spell link output when we're dealing with runeforging.
+------------------------------------------------------------------------
+r2016 | ackis | 2009-06-05 16:19:34 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Take Thaoky's Altoholic table for reverse lookups on recipes and add it in to the dataminer.  Used with permission btw. Penis.
+------------------------------------------------------------------------
+r2015 | ackis | 2009-06-05 15:46:55 +0000 (Fri, 05 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Update luadoc for function Torhal wrote.
+------------------------------------------------------------------------
+r2014 | torhal | 2009-06-05 00:39:52 +0000 (Fri, 05 Jun 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+In CreateReverseLookup(): Added recipelist parameter, and removed the non-unneeded internal call to LoadRecipe(). Updated all occurrences.
+Implemented addon:ScanProfession()
+Added twipe() to upvalues.
+------------------------------------------------------------------------
+r2013 | torhal | 2009-06-04 23:17:32 +0000 (Thu, 04 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+   M /trunk/AckisRecipeList.lua
+
+Moved addon:ScanSkillLevelData() and addon:ScanTrainerData() into a do block which contains tables which are now re-used between the two.
+Changed some upvalues in AckisRecipeList.lua
+------------------------------------------------------------------------
+r2012 | ackis | 2009-06-04 21:59:04 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.toc
+
+Remove pompy. Hah! Take that! Teheheh
+------------------------------------------------------------------------
+r2011 | ackis | 2009-06-04 21:52:14 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Fix dk flag
+------------------------------------------------------------------------
+r2010 | ackis | 2009-06-04 21:51:38 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+If the trainer flag is set, we make sure boprecipe flag is set.
+------------------------------------------------------------------------
+r2009 | ackis | 2009-06-04 21:27:20 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+
+Fix 16654
+------------------------------------------------------------------------
+r2008 | ackis | 2009-06-04 21:20:37 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Everyone hates hunters.
+------------------------------------------------------------------------
+r2007 | ackis | 2009-06-04 20:32:07 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add all reps to the list.
+------------------------------------------------------------------------
+r2006 | ackis | 2009-06-04 20:22:36 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Fix pvp flag issue if doing db scan, add checking to see about item types.
+------------------------------------------------------------------------
+r2005 | ackis | 2009-06-04 20:18:43 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Hide the output of the miner if there's no missing flags/etc
+------------------------------------------------------------------------
+r2004 | torhal | 2009-06-04 19:36:46 +0000 (Thu, 04 Jun 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+In addon:ScanTooltip(): Renamed confirmtype to confirm_role, added its toggling to a few more places where it seemed it should go, and removed the check for it as I couldn't see why it was needed and it was inhibiting the detection of cloth/mail/plate and class-specific items. Replaced a call to print() with addon:Print().
+
+
+------------------------------------------------------------------------
+r2003 | ackis | 2009-06-04 18:32:37 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add a few comments.
+------------------------------------------------------------------------
+r2002 | ackis | 2009-06-04 18:29:32 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add checks for str, agi, and spi
+------------------------------------------------------------------------
+r2001 | ackis | 2009-06-04 17:51:15 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add a couple more debug statements in.
+------------------------------------------------------------------------
+r2000 | ackis | 2009-06-04 17:49:52 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Remove strlower to a single call
+------------------------------------------------------------------------
+r1999 | ackis | 2009-06-04 17:40:20 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Check for nil text
+------------------------------------------------------------------------
+r1998 | ackis | 2009-06-04 17:37:12 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Typo fix.
+------------------------------------------------------------------------
+r1997 | ackis | 2009-06-04 17:32:52 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Lets look at the right side of the tooltip too.
+------------------------------------------------------------------------
+r1996 | ackis | 2009-06-04 17:03:26 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Remove dupe notice for now, add text printing out to see what's going on.
+------------------------------------------------------------------------
+r1995 | ackis | 2009-06-04 16:46:12 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add new function which will scan a single spell ID.
+------------------------------------------------------------------------
+r1994 | ackis | 2009-06-04 16:42:35 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add support for weapon type scanning.
+------------------------------------------------------------------------
+r1993 | ackis | 2009-06-04 16:30:20 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+
+Fix warrior flag being missing.
+------------------------------------------------------------------------
+r1992 | ackis | 2009-06-04 16:21:47 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Fix vendor flag being assigned to everything.
+------------------------------------------------------------------------
+r1991 | ackis | 2009-06-04 16:18:21 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Fix the classes datamining (some were wrong) and if there are no classes found, flag all of them.
+------------------------------------------------------------------------
+r1990 | pompachomp | 2009-06-04 08:40:54 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Enchant.lua
+
+added missing Enchanting trainer data, Ticket 632
+------------------------------------------------------------------------
+r1989 | torhal | 2009-06-04 07:52:51 +0000 (Thu, 04 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In ReleaseTable(): Changed wipe to twipe.
+
+------------------------------------------------------------------------
+r1988 | pompachomp | 2009-06-04 07:35:45 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+fixed a bug with rep level labels.
+------------------------------------------------------------------------
+r1987 | pompachomp | 2009-06-04 00:37:33 +0000 (Thu, 04 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Vendor.lua
+
+Fixed location of Sid Limbardi and removed an unneeded variable.
+------------------------------------------------------------------------
+r1986 | torhal | 2009-06-03 23:11:20 +0000 (Wed, 03 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+In addon:ScanTooltip(): Changed pattern in gsub() to correctly parse things such as "Alchemy: Transmute: Eternal Water to Fire" and "Engineering: The Mortar: Reloaded". Added a check for failed reverse lookups.
+
+------------------------------------------------------------------------
+r1985 | torhal | 2009-06-03 22:40:00 +0000 (Wed, 03 Jun 2009) | 4 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+In CreateReverseLookup(): Change self:Print() to addon:Print().
+In addon:TooltipScanDatabase(): Fixed incorrect name. - Tooltip-scanning of the entire database now works.
+Upvalued some more Lua functions and Blizzard API.
+
+------------------------------------------------------------------------
+r1984 | torhal | 2009-06-03 22:02:28 +0000 (Wed, 03 Jun 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Added "Profession: " keys to recipenames table.
+
+
+------------------------------------------------------------------------
+r1983 | ackis | 2009-06-03 20:33:11 +0000 (Wed, 03 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLColour.lua
+   M /trunk/ARLConfig.lua
+   M /trunk/ARLDatamine.lua
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+   M /trunk/Locals/ARLLocals-deDE.lua
+   M /trunk/Locals/ARLLocals-enUS.lua
+   M /trunk/Locals/ARLLocals-esES.lua
+   M /trunk/Locals/ARLLocals-esMX.lua
+   M /trunk/Locals/ARLLocals-frFR.lua
+   M /trunk/Locals/ARLLocals-koKR.lua
+   M /trunk/Locals/ARLLocals-ruRU.lua
+   M /trunk/Locals/ARLLocals-zhCN.lua
+   M /trunk/Locals/ARLLocals-zhTW.lua
+   M /trunk/Locals/testdeDE.lua
+   M /trunk/Locals/testenUS.lua
+   M /trunk/Locals/testesMX.lua
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Cook.lua
+   M /trunk/RecipeDB/ARL-Custom.lua
+   M /trunk/RecipeDB/ARL-Enchant.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-FirstAid.lua
+   M /trunk/RecipeDB/ARL-Inscription.lua
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+   M /trunk/RecipeDB/ARL-Leatherwork.lua
+   M /trunk/RecipeDB/ARL-Mob.lua
+   M /trunk/RecipeDB/ARL-Quest.lua
+   M /trunk/RecipeDB/ARL-Reputation.lua
+   M /trunk/RecipeDB/ARL-Runeforge.lua
+   M /trunk/RecipeDB/ARL-Seasonal.lua
+   M /trunk/RecipeDB/ARL-Smelt.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+   M /trunk/RecipeDB/ARL-Trainer.lua
+   M /trunk/RecipeDB/ARL-Vendor.lua
+
+Touch all files adding license info to each code file.  License updated as well, releasing the localizations into the public domain. Remaining code remains All Rights Reserved with a few exceptions (noted in comments).
+------------------------------------------------------------------------
+r1982 | ackis | 2009-06-03 20:09:09 +0000 (Wed, 03 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Localization.txt
+
+Update localization docs.
+------------------------------------------------------------------------
+r1981 | Jim-Bim | 2009-06-03 20:08:16 +0000 (Wed, 03 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+AckisRecipeList:
+- fixed the gun text in the filter panel
+------------------------------------------------------------------------
+r1980 | torhal | 2009-06-03 20:03:56 +0000 (Wed, 03 Jun 2009) | 4 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In ReleaseTable(): Check for nil table.
+Added ACQUIRE_* constants for readability. Removed now-unneeded comments.
+Enclosed checkFactions() within a do block which also contains REP_* constants.
+
+------------------------------------------------------------------------
+r1979 | ackis | 2009-06-03 20:01:30 +0000 (Wed, 03 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+   M /trunk/Locals/testesMX.lua
+
+Update testesMX.lua
+------------------------------------------------------------------------
+r1978 | ackis | 2009-06-03 19:50:47 +0000 (Wed, 03 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLConfig.lua
+   M /trunk/ARLDatamine.lua
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+   M /trunk/Docs/Documentation.txt
+   M /trunk/Locals/testenUS.lua
+
+Add a gun flag.
+------------------------------------------------------------------------
+r1977 | ackis | 2009-06-03 19:39:09 +0000 (Wed, 03 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   D /trunk/ARLDataminer.rb
+
+Remove ARLDataminer.rb since we aren't parsing web-sites for shit anymore (thing would have has to be rewritten anyways.)
+------------------------------------------------------------------------
+r1976 | ackis | 2009-06-03 19:38:20 +0000 (Wed, 03 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Update autodocs for dataminer.
+------------------------------------------------------------------------
+r1975 | torhal | 2009-06-03 06:31:32 +0000 (Wed, 03 Jun 2009) | 3 lines
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+In addon:addTradeAcquire(): Moved AcquireIDList table out of the function and into an enclosing do block - wipe() it each time the function is called.
+In addon:GetRecipeLocations(): Create tables for locationlist and locationchecklist in enclosing do block - wipe() them in the function. Re-organize if-else block into if-not-then-return.
+
+------------------------------------------------------------------------
+r1974 | pompachomp | 2009-06-03 04:51:33 +0000 (Wed, 03 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Quest.lua
+
+Fixed incorrect data for "The Great Moongraze Hunt" quest.
+------------------------------------------------------------------------
+r1973 | ackis | 2009-06-03 02:38:40 +0000 (Wed, 03 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.toc
+
+Another fake commit to see if this damn thing will actually work.
+------------------------------------------------------------------------
+r1972 | ackis | 2009-06-02 23:56:11 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.toc
+
+Packager == failure.
+------------------------------------------------------------------------
+r1971 | ackis | 2009-06-02 23:27:58 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.toc
+
+packager = sux0rz
+------------------------------------------------------------------------
+r1970 | torhal | 2009-06-02 22:28:51 +0000 (Tue, 02 Jun 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+In addon:TooltipScanDatabase(): Added check for nil recipe link, and print out its ID and name.
+In addon:ScanTooltip(): Renamed invalid variable names 1H and 2H to OneHanded and TwoHanded.
+
+------------------------------------------------------------------------
+r1969 | torhal | 2009-06-02 20:43:52 +0000 (Tue, 02 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Fixed addTradeSkill(): Copypasta fail.
+
+------------------------------------------------------------------------
+r1968 | ackis | 2009-06-02 20:00:41 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add some item type scanning to the tooltipscan functions.
+------------------------------------------------------------------------
+r1967 | torhal | 2009-06-02 19:38:01 +0000 (Tue, 02 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+In addon:addTradeSkill(): Moved most data initialization and comments to within the table constructor. Removed un-needed checks.
+
+------------------------------------------------------------------------
+r1966 | ackis | 2009-06-02 19:22:23 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add a function to scan the entire recipe database tooltips.  This may blow shit up.
+------------------------------------------------------------------------
+r1965 | ackis | 2009-06-02 19:12:16 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add class checking to the tooltip scanning.
+------------------------------------------------------------------------
+r1964 | pompachomp | 2009-06-02 19:00:05 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Inscription.lua
+
+fixed incription levels for some recipes.
+------------------------------------------------------------------------
+r1963 | ackis | 2009-06-02 18:59:37 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add more player type flags to the dataminer.
+------------------------------------------------------------------------
+r1962 | torhal | 2009-06-02 18:48:01 +0000 (Tue, 02 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Reworked missing library detection for easier maintenance and consistency.
+
+------------------------------------------------------------------------
+r1961 | ackis | 2009-06-02 18:42:39 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testenUS.lua
+
+Remove a couple unneeded localization phrases.
+------------------------------------------------------------------------
+r1960 | ackis | 2009-06-02 18:41:56 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/CHANGES.txt
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Quest.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+Update the lunar festival recipes with skill up info, proper acquire info, and expansion info.
+------------------------------------------------------------------------
+r1959 | pompachomp | 2009-06-02 17:53:28 +0000 (Tue, 02 Jun 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+
+added missing Alchemy trainer data, Tickets 621,622,627
+added missing Blacksmithing trainer data, Tickets 620,623
+------------------------------------------------------------------------
+r1958 | ackis | 2009-06-02 15:04:12 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.toc
+
+Add minion support.  Muhahhahahahahahahahah
+------------------------------------------------------------------------
+r1957 | ackis | 2009-06-02 15:00:59 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Wowwiki.txt
+
+Update wiki doc.
+------------------------------------------------------------------------
+r1956 | ackis | 2009-06-02 02:59:19 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Cook.lua
+
+Add Pumpkin Pie and Slow-Roasted Turkey to Cooking.
+------------------------------------------------------------------------
+r1955 | ackis | 2009-06-02 02:55:07 +0000 (Tue, 02 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Remove skillet api calls.
+------------------------------------------------------------------------
+r1954 | ackis | 2009-06-01 17:17:04 +0000 (Mon, 01 Jun 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Fix a replacement string.
+------------------------------------------------------------------------
+r1953 | ackis | 2009-05-31 19:29:23 +0000 (Sun, 31 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add remaining tradeskill links to be generated.
+------------------------------------------------------------------------
+r1952 | pompachomp | 2009-05-30 04:00:56 +0000 (Sat, 30 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Vendor.lua
+
+fixed location of Rin'wosho the Trader
+------------------------------------------------------------------------
+r1951 | ackis | 2009-05-30 01:54:50 +0000 (Sat, 30 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Revised item type flags.
+------------------------------------------------------------------------
+r1950 | ackis | 2009-05-30 01:03:36 +0000 (Sat, 30 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Vendor scanning works, needs some tweaks to catch everything however.
+------------------------------------------------------------------------
+r1949 | ackis | 2009-05-29 20:55:34 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Another datamining update w/ the vendor stuff.
+------------------------------------------------------------------------
+r1948 | ackis | 2009-05-29 20:20:26 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+More datamining updates.
+------------------------------------------------------------------------
+r1947 | torhal | 2009-05-29 20:19:45 +0000 (Fri, 29 May 2009) | 6 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+* ARLFrame.lua *
+In addon:DisplayFrame(): Removed rDB parameter - recipeDB is now assigned from addon:GetRecipeTable(). Removed sortedRI parameter - sortedRecipeIndex is now assigned by addon:SortMissingRecipes().
+* AckisRecipeList.lua *
+In addon:AckisRecipeList_Command(): Removed call to addon:SortMissingRecipes() and un-needed parameters to addon:DisplayFrame().
+In addon:SortMissingRecipes(): Moved SortedRecipeIndex out of here and into the enclosing do block - it's now wiped instead of re-created before being populated.
+
+------------------------------------------------------------------------
+r1946 | ackis | 2009-05-29 20:07:13 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add rep matching (not all added in) and more specializations.
+------------------------------------------------------------------------
+r1945 | torhal | 2009-05-29 19:50:31 +0000 (Fri, 29 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In addon:SetupMap(): Re-arranged some checks/variables.
+In GenerateTooltipContent(): Added check to see if the CTRL+SHIFT+Click line should be added to the tooltip based on user preferences.
+
+------------------------------------------------------------------------
+r1944 | ackis | 2009-05-29 19:22:13 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Update tooltip scanning to print out flags as it finds them.
+------------------------------------------------------------------------
+r1943 | torhal | 2009-05-29 19:14:17 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Trainer.lua
+
+Fixed coordinates for Josephine Lister.
+------------------------------------------------------------------------
+r1942 | ackis | 2009-05-29 18:47:55 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Fix dataminer vendor issue.
+------------------------------------------------------------------------
+r1941 | ackis | 2009-05-29 18:45:08 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/CHANGES.txt
+
+Update changelog.
+------------------------------------------------------------------------
+r1940 | ackis | 2009-05-29 18:42:55 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+You know what, lets make trainers show up on the map list, I know I have trouble finding them, and I'm sure there are other retards just like me.
+------------------------------------------------------------------------
+r1939 | ackis | 2009-05-29 18:38:07 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Add a few comments to people know what I was doing with that code.
+------------------------------------------------------------------------
+r1938 | ackis | 2009-05-29 18:36:06 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Clean up the map code a bit.  The function to display items on the map now properly returns false for trainers and true for mobs.
+------------------------------------------------------------------------
+r1937 | ackis | 2009-05-29 18:21:27 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Optimize the tooltip scanning code to break out of the loop if we're not dealing with a recipe.
+------------------------------------------------------------------------
+r1936 | torhal | 2009-05-29 10:14:35 +0000 (Fri, 29 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+Fixed waypoint generation.
+
+------------------------------------------------------------------------
+r1935 | torhal | 2009-05-29 07:28:46 +0000 (Fri, 29 May 2009) | 4 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+In AckisRecipeList.lua:
+  Removed some garbage creation throughout the file by moving some table declarations and using twipe(). Made some code more readable by changing some if checks and using return.
+In ARLFrame.lua:
+  Removed empty-table creation from some upvalues, because their value is always set by addon:DisplayFrame() or InitializeFrame(). In addon:DisplayFrame(): Removed call to addon:SortMissingRecipes() because this is already done prior to calling addon:DisplayFrame().
+------------------------------------------------------------------------
+r1934 | torhal | 2009-05-29 05:39:36 +0000 (Fri, 29 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Added table caching mechanisms, and applied them to DisplayStrings. Added WipeDisplayStrings() function to facilitate this.
+Used twipe() in several places where permanent tables were being re-created.
+
+------------------------------------------------------------------------
+r1933 | pompachomp | 2009-05-29 01:27:16 +0000 (Fri, 29 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Inscription.lua
+
+added missing Inscription trainer data, Ticket 557
+------------------------------------------------------------------------
+r1932 | pompachomp | 2009-05-29 00:13:02 +0000 (Fri, 29 May 2009) | 5 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Leatherwork.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+added missing Alchemy trainer data, Ticket 618
+added missing Blacksmithing trainer data, Tickets 580,586,605
+added missing Engineering trainer data, Tickets 604,617
+added missing Leatherworking trainer data, Ticket 556
+added missing Tailoring trainer data, Tickets 565,577,608
+------------------------------------------------------------------------
+r1931 | pompachomp | 2009-05-28 21:59:50 +0000 (Thu, 28 May 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+   M /trunk/RecipeDB/ARL-Smelt.lua
+
+added missing Jewelcrafting trainer data, Tickets 558,619
+Added back the custom string to acquire info of Smelt Elementium
+------------------------------------------------------------------------
+r1930 | torhal | 2009-05-28 06:51:16 +0000 (Thu, 28 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Moved all calls to StaticPopupHide() from addon:CloseWindow() (and all other places they were used) to addon:ClosePopups() since this is used in quite a few places, some without hiding the main frame. Added ARL_SEARCHFILTERED to ClosePopups(), as it was used in two other places but missing here.
+Re-organized and categorized the upvalues.
+
+------------------------------------------------------------------------
+r1929 | torhal | 2009-05-28 01:35:08 +0000 (Thu, 28 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/CHANGES.txt
+
+Added general descriptions of my changes thusfar.
+------------------------------------------------------------------------
+r1928 | torhal | 2009-05-27 22:08:01 +0000 (Wed, 27 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+Renamed addon:CreateFrame() to addon:DisplayFrame() and moved all of the main frame code into a local function named InitializeFrame(), since it was 1276 lines long and was only ever called once.
+In InitializeFrame(): Condensed the faction name assignment into 8 lines of code from 26.
+
+------------------------------------------------------------------------
+r1927 | ackis | 2009-05-27 15:35:45 +0000 (Wed, 27 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/CHANGES.txt
+
+Update changelog.
+------------------------------------------------------------------------
+r1926 | ackis | 2009-05-27 15:33:42 +0000 (Wed, 27 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Enchant.lua
+
+Remove a couple more duplicate trainer entries.
+------------------------------------------------------------------------
+r1925 | torhal | 2009-05-27 00:48:17 +0000 (Wed, 27 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Added upvalues factionAlliance, factionHorde, and factionNeutral instead of doing a Babble lookup every time these are needed. Replaced all lookups for these values.
+In GenerateTooltipContent(): If the recipe comes from a quest for the opposing faction, show "FactionName Quest" so there is at least SOME information under "Obtained From:"
+
+------------------------------------------------------------------------
+r1924 | pompachomp | 2009-05-26 23:43:06 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+   M /trunk/RecipeDB/ARL-Enchant.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Leatherwork.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+all duplicate acquire information in the database has been removed.
+------------------------------------------------------------------------
+r1923 | torhal | 2009-05-26 22:19:28 +0000 (Tue, 26 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In ttAdd(): Remove use_spans parameter - all single column lines now span both columns. Set min/max length based on fontSize so the tooltip scales with the font.
+In GenerateTooltipContent(): Moved clr1 and clr2 to just before their first use. Changed some comments to make more sense. Fixed all ttAdd() calls. Made the recipe name a header line and centered it.
+
+------------------------------------------------------------------------
+r1922 | pompachomp | 2009-05-26 22:11:47 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Vendor.lua
+
+fixed Ontuvo's location.
+------------------------------------------------------------------------
+r1921 | pompachomp | 2009-05-26 22:05:31 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+
+fixed the teardrop crimson spinel acquire info
+------------------------------------------------------------------------
+r1920 | pompachomp | 2009-05-26 21:51:18 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+
+fixed some acquire info for jc
+------------------------------------------------------------------------
+r1919 | pompachomp | 2009-05-26 21:03:57 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+
+fixed jc duplicate acquire entries
+------------------------------------------------------------------------
+r1918 | ackis | 2009-05-26 19:48:28 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+
+Did a quick find/replace of JC duplicate entries in the db.
+------------------------------------------------------------------------
+r1917 | ackis | 2009-05-26 19:44:25 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testenUS.lua
+   M /trunk/RecipeDB/ARL-FirstAid.lua
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+   M /trunk/RecipeDB/ARL-Vendor.lua
+
+Remove duplicate trainer in first aid, add new JC vendor in Icecrown, update a couple JC recipes.
+------------------------------------------------------------------------
+r1916 | torhal | 2009-05-26 19:38:15 +0000 (Tue, 26 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Re-added TipTac support since Aezay added the option to not hook OnHide.
+In GenerateClickableTT(): Removed empty space between character list and "Other Realms".
+
+------------------------------------------------------------------------
+r1915 | ackis | 2009-05-26 19:18:04 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add some tooltip scanning debug code.
+------------------------------------------------------------------------
+r1914 | torhal | 2009-05-26 19:05:28 +0000 (Tue, 26 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In SetSpellTooltip(): Added a third parameter - "link" - which is used by code moved into the function from GenerateTooltipContent().
+In GenerateTooltipContent(): Renamed some local variables. Replaced the huge if-not-then-else-end with if-not-then-return-end to remove one level of indentation from most of the function. Commented out TipTac gradient support, as TipTac hooks an OnHide script which was causing C stack overflows.
+
+------------------------------------------------------------------------
+r1913 | ackis | 2009-05-26 18:24:57 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+Move a bunch of debug stuff from svn only to alphas as well.
+------------------------------------------------------------------------
+r1912 | ackis | 2009-05-26 17:37:57 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Remove debug code.
+------------------------------------------------------------------------
+r1911 | ackis | 2009-05-26 17:36:14 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Add a fix for duplicate entries for reputations.
+------------------------------------------------------------------------
+r1910 | ackis | 2009-05-26 17:13:11 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+add some debug output for pompy right now (will remove once done, don't QQ aboot it pls
+------------------------------------------------------------------------
+r1909 | ackis | 2009-05-26 16:53:14 +0000 (Tue, 26 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+Update main page a bit
+------------------------------------------------------------------------
+r1908 | torhal | 2009-05-26 05:09:57 +0000 (Tue, 26 May 2009) | 7 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In ttAdd(): Right-justify all second columns for a uniform tooltip look.
+In ttAdd(): Set the maximum width of single-column lines to 385 pixels to maintain a uniform tooltip width when scrolling down the recipe list. Lines longer than this will be wrapped.
+In GenerateTooltipContent(): Fixed all calls to ttAdd() so that their use_spans parameters were true or false so that the max-width would be obeyed.
+In GenerateTooltipContent(): Replaced all calls to ttAdd() with a value of "." to calls of arlTooltip:AddSeparator(), and added a second separator to the bottom.
+In CreateFrame(): Added TipTac support to the clicktip on Acquire.
+
+
+------------------------------------------------------------------------
+r1907 | pompachomp | 2009-05-26 01:59:09 +0000 (Tue, 26 May 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+
+added missing Blacksmithing trainer data, Ticket 615
+
+------------------------------------------------------------------------
+r1906 | pompachomp | 2009-05-26 01:36:17 +0000 (Tue, 26 May 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+added missing Tailoring trainer data, Tickets 582,585,588,590
+
+------------------------------------------------------------------------
+r1905 | ackis | 2009-05-25 21:59:18 +0000 (Mon, 25 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Rewrite the vendor scanning via tooltips.
+------------------------------------------------------------------------
+r1904 | ackis | 2009-05-25 17:03:16 +0000 (Mon, 25 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Add some code which will display if there's a duplicate acquire ID for a recipe.
+------------------------------------------------------------------------
+r1903 | torhal | 2009-05-25 09:52:23 +0000 (Mon, 25 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In GenerateTooltipContent(): Added support code in case Aezay decides to make TipTac play nicer with LibQTip.
+
+------------------------------------------------------------------------
+r1902 | torhal | 2009-05-25 05:43:08 +0000 (Mon, 25 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In GenerateClickableTT(): Removed some unnecessary "y, x" assignments, added a few more separator lines, and used AddHeader() for teh header lines.
+
+------------------------------------------------------------------------
+r1901 | ackis | 2009-05-25 01:18:36 +0000 (Mon, 25 May 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testesMX.lua
+
+Copy testenus to testesmx. Basically a fake commit.
+------------------------------------------------------------------------
+r1900 | pompachomp | 2009-05-25 01:08:12 +0000 (Mon, 25 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Vendor.lua
+
+added "Fariel Starsong" in the vendor list.
+------------------------------------------------------------------------
+r1899 | pompachomp | 2009-05-25 00:59:43 +0000 (Mon, 25 May 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testenUS.lua
+   M /trunk/RecipeDB/ARL-Quest.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+fixed acquire info for some tailoring items and removed a quest no longer in game
+------------------------------------------------------------------------
+r1898 | pompachomp | 2009-05-25 00:07:31 +0000 (Mon, 25 May 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testenUS.lua
+
+added a mob name and changed custom27 entry
+------------------------------------------------------------------------
+r1897 | pompachomp | 2009-05-24 23:11:43 +0000 (Sun, 24 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Mob.lua
+
+fix MobID
+------------------------------------------------------------------------
+r1896 | pompachomp | 2009-05-24 23:03:02 +0000 (Sun, 24 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Mob.lua
+   M /trunk/RecipeDB/ARL-Smelt.lua
+
+fixed acquire info for Smelt Elementium.
+------------------------------------------------------------------------
+r1895 | pompachomp | 2009-05-24 19:25:34 +0000 (Sun, 24 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+
+fixed acquire data for Inlaid Mithril Cylinder
+------------------------------------------------------------------------
+r1894 | torhal | 2009-05-24 16:35:12 +0000 (Sun, 24 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Made the clickable tooltip acquire when needed and release when done. Moved its callback handler setting to its Acquire point.
+------------------------------------------------------------------------
+r1893 | pompachomp | 2009-05-24 09:48:43 +0000 (Sun, 24 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/CHANGES.txt
+
+fixed link.
+------------------------------------------------------------------------
+r1892 | pompachomp | 2009-05-24 09:46:02 +0000 (Sun, 24 May 2009) | 1 line
+Changed paths:
+   M /trunk/.docmeta
+   M /trunk/Docs/CHANGES.txt
+
+doc update , switched markup to wikicreole
+------------------------------------------------------------------------
+r1891 | torhal | 2009-05-24 06:56:40 +0000 (Sun, 24 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In ARLFrame.lua: Changed support code for arlTooltip to acquire it when needed and release it when done.
+------------------------------------------------------------------------
+r1890 | pompachomp | 2009-05-23 20:39:13 +0000 (Sat, 23 May 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Enchant.lua
+
+added missing Blacksmithing trainer data, Ticket 592
+added missing Enchanting trainer data, Tickets 579,584
+------------------------------------------------------------------------
+r1889 | pompachomp | 2009-05-23 20:00:36 +0000 (Sat, 23 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Leatherwork.lua
+
+added missing Leatherworking trainer data, Tickets 587,593,597,576,603
+------------------------------------------------------------------------
+r1888 | pompachomp | 2009-05-23 04:24:22 +0000 (Sat, 23 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/In-game.txt
+
+fixed some spelling mistakes.
+------------------------------------------------------------------------
+r1887 | pompachomp | 2009-05-23 04:17:02 +0000 (Sat, 23 May 2009) | 1 line
+Changed paths:
+   M /trunk/.docmeta
+   M /trunk/Docs/Localization.txt
+
+localization doc update and switched markup to wikicreole
+------------------------------------------------------------------------
+r1886 | pompachomp | 2009-05-23 04:07:12 +0000 (Sat, 23 May 2009) | 1 line
+Changed paths:
+   M /trunk/.docmeta
+   M /trunk/Docs/Feedback.txt
+
+feedback doc update and switched markup to wikicreole
+------------------------------------------------------------------------
+r1885 | pompachomp | 2009-05-23 03:48:15 +0000 (Sat, 23 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Engineer.lua
+
+added/removed missing/incorrect Engineering trainer data, Tickets 589,574,575
+------------------------------------------------------------------------
+r1884 | pompachomp | 2009-05-23 03:19:53 +0000 (Sat, 23 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+
+added missing Alchemy trainer data, Tickets 578,583,591,596
+------------------------------------------------------------------------
+r1883 | ackis | 2009-05-22 18:01:59 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+   M /trunk/Docs/Main.txt
+
+Local libstub to improve speeeeeed.
+------------------------------------------------------------------------
+r1882 | ackis | 2009-05-22 16:25:17 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+Remove old images
+------------------------------------------------------------------------
+r1881 | ackis | 2009-05-22 16:22:36 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/In-game.txt
+   M /trunk/Docs/Main.txt
+
+Update images to use proper syntax
+------------------------------------------------------------------------
+r1880 | ackis | 2009-05-22 16:17:04 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+Test image replacement
+------------------------------------------------------------------------
+r1879 | ackis | 2009-05-22 16:15:00 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/.docmeta
+
+Update .docmeta for the creole stuff
+------------------------------------------------------------------------
+r1878 | torhal | 2009-05-22 06:01:28 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In addon:SetupMap(): Added check for loc == nil and return if so, added another return if no map was found.
+------------------------------------------------------------------------
+r1877 | torhal | 2009-05-22 05:17:07 +0000 (Fri, 22 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+When removing the tradeskill list of an alt, check to see if there are any more tradeskill lists under that realm and remove the realm if not.
+Further prettified the menus by adding headers where they were missing and using the new LibQTip separator line.
+
+------------------------------------------------------------------------
+r1876 | pompachomp | 2009-05-22 04:09:14 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/In-game.txt
+
+doc update , switched markup to wikicreole
+------------------------------------------------------------------------
+r1875 | ackis | 2009-05-22 00:22:51 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+Few minor tweakages
+------------------------------------------------------------------------
+r1874 | pompachomp | 2009-05-22 00:12:19 +0000 (Fri, 22 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+youtube link fix
+------------------------------------------------------------------------
+r1873 | pompachomp | 2009-05-21 23:51:28 +0000 (Thu, 21 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+Changed format of the main page to WikiCreole
+------------------------------------------------------------------------
+r1872 | ackis | 2009-05-21 14:41:53 +0000 (Thu, 21 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLConfig.lua
+   M /trunk/Locals/testenUS.lua
+
+Add a caveat to the datamining screen saying some of these options may lag you a bit when you open up trainers.
+------------------------------------------------------------------------
+r1871 | torhal | 2009-05-21 07:59:56 +0000 (Thu, 21 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+In ARLFrame.lua: Added realm name above character selection, and added tradeskill wiping for the selected toon if the Alt key is held while the left mouse button is pressed.
+In AckisRecipeList.lua: Replaced global wipe() with local twipe().
+
+------------------------------------------------------------------------
+r1870 | pompachomp | 2009-05-21 07:56:56 +0000 (Thu, 21 May 2009) | 4 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Enchant.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Leatherwork.lua
+
+added/removed missing/incorrect Engineering trainer data, Ticket 601
+added missing Blacksmithing trainer data, Ticket 600
+removed incorrect Enchanting trainer data, ticket 599
+added missing Leatherworking trainer data, Ticket 581
+------------------------------------------------------------------------
+r1869 | torhal | 2009-05-20 08:40:00 +0000 (Wed, 20 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Fixed clicktip callback
+------------------------------------------------------------------------
+r1868 | torhal | 2009-05-20 07:06:23 +0000 (Wed, 20 May 2009) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.toc
+   M /trunk/embeds.xml
+
+Updated references for LibQTipClick in .pkgmeta, ARLFrame.lua, embeds.xml, and AckisRecipeList.toc to use LibQTipClick-1.1
+------------------------------------------------------------------------
+r1867 | ackis | 2009-05-19 19:58:08 +0000 (Tue, 19 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Remove 'sanity check'
+------------------------------------------------------------------------
+r1866 | torhal | 2009-05-19 14:30:50 +0000 (Tue, 19 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Replaced my additions of wipe() with twipe().
+------------------------------------------------------------------------
+r1865 | ackis | 2009-05-18 22:26:33 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/AckisRecipeList.toc
+
+Move svn version to RC9 and turn off change log.
+------------------------------------------------------------------------
+r1863 | ackis | 2009-05-18 22:23:05 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/Locals/testenUS.lua
+
+Other Realm -> Other Realms
+------------------------------------------------------------------------
+r1862 | ackis | 2009-05-18 22:16:48 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Enchant.lua
+
+Fix a few enchanting recipes.
+------------------------------------------------------------------------
+r1861 | ackis | 2009-05-18 22:13:54 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+   M /trunk/RecipeDB/ARL-FirstAid.lua
+   M /trunk/RecipeDB/ARL-Smelt.lua
+
+Fix speciality error with first aid and smelting.  Add ethereal oil item to alchemy.
+------------------------------------------------------------------------
+r1860 | pompachomp | 2009-05-18 22:09:55 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Inscription.lua
+
+fixed incorrect skill level of some Inscription items, Ticket 573
+------------------------------------------------------------------------
+r1859 | torhal | 2009-05-18 21:56:41 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Fixed menu behavior when clicking the alt-tradeskills button after selecting "Other Realm"
+------------------------------------------------------------------------
+r1858 | torhal | 2009-05-18 21:45:57 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Changed the "Alt Tradeskills" button to hide the menu if nothing has been modified and regenerate it otherwise.
+------------------------------------------------------------------------
+r1857 | pompachomp | 2009-05-18 21:40:29 +0000 (Mon, 18 May 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+
+added missing Jewelcrafting trainer data, Ticket 563
+
+------------------------------------------------------------------------
+r1856 | ackis | 2009-05-18 21:33:01 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.toc
+
+ToC update.
+------------------------------------------------------------------------
+r1855 | ackis | 2009-05-18 21:11:11 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Manual changlog enabled for tagging prep.
+------------------------------------------------------------------------
+r1854 | Jim-Bim | 2009-05-18 21:03:37 +0000 (Mon, 18 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/Locals/testenUS.lua
+
+AckisRecipeList:
+- made "Other Realm" text localizeable and added it to wowace
+------------------------------------------------------------------------
+r1853 | pompachomp | 2009-05-18 20:38:26 +0000 (Mon, 18 May 2009) | 3 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+added missing Engineering trainer data, Ticket 554
+added missing Blacksmithing trainer data, Ticket 555
+removed incorrect Enchanting trainer data in the Tailoring database
+------------------------------------------------------------------------
+r1852 | torhal | 2009-05-18 19:41:14 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In GenerateClickableTT() and HandleTTClick(): Modified menu generation to display characters on the current realm, and a line with "Other Realm" - at which point all other realms will be displayed, and selecting one will display all characters on that realm.
+------------------------------------------------------------------------
+r1851 | ackis | 2009-05-18 18:02:19 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/CHANGES.txt
+   M /trunk/Docs/Datamine.txt
+   M /trunk/Docs/In-game.txt
+   M /trunk/Docs/Main.txt
+
+Update docs to reflect new images.
+------------------------------------------------------------------------
+r1850 | torhal | 2009-05-18 16:46:24 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In GenerateClickableTT(): Added counter for number of characters. If above 10, switch to showing a Realm selector then Character selector. Otherwise, show "Character - Realm". Removed all references to click_info.prof, as it is no longer needed. Changed behavior of Profession clicktip to not destruct upon click so the user can link multiple tradeskills per-character.
+------------------------------------------------------------------------
+r1849 | ackis | 2009-05-18 15:54:18 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+When you click on an alt tooltip, the alts tradeskill is now printed to chat.
+------------------------------------------------------------------------
+r1848 | ackis | 2009-05-18 15:44:55 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+   M /trunk/Locals/testenUS.lua
+
+Add a tooltip for the alt tradeskill stuff, change the text so it isn't grey.
+------------------------------------------------------------------------
+r1847 | aesirrising | 2009-05-18 15:08:09 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLConfig.lua
+   M /trunk/ARLDatamine.lua
+   M /trunk/Locals/testenUS.lua
+
+Fixes several typos appearing within in-game documentation and UI elements.  Fixes control slider stepping for Font Size UI widget.  See ticket 572 for details.
+------------------------------------------------------------------------
+r1846 | torhal | 2009-05-18 07:03:27 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Added an OnHide script to ARL_MiscAltBtn to wipe click_info and hide the clicktip.
+------------------------------------------------------------------------
+r1845 | torhal | 2009-05-18 06:51:28 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Changed ARL_MiscAltBtn to set clicktip's parent to itself, and wipe click_info and regenerate the menu if clicked while the menu is shown.
+------------------------------------------------------------------------
+r1844 | torhal | 2009-05-18 06:30:05 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Removed some dead code.
+------------------------------------------------------------------------
+r1843 | torhal | 2009-05-18 06:17:52 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+In AckisRecipeList.lua: Added global table to db defaults, changed addon:TRADE_SKILL_SHOW() to use db.global rather than db.profile. In ARLFrame.lua: Changed GenerateClickableTT() to cycle through menus from Realm -> Name -> Profession, and added support for this in HandleTTClick()
+------------------------------------------------------------------------
+r1842 | torhal | 2009-05-18 04:13:56 +0000 (Mon, 18 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Renamed GenerateClickAbleTT() to GenerateClickableTT() and wrote the initial code for it - set ARL_MiscAltBtn's OnClick script to show/generate or hide it depending on its current state. Enabled ARL_MiscAltBtn so I could test what I wrote. None of this will not work as intended (showing alts' tradeskills) using the current db setup, since it only knows about the currently logged-in character.
+------------------------------------------------------------------------
+r1841 | ackis | 2009-05-17 23:55:54 +0000 (Sun, 17 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+Make image better.
+------------------------------------------------------------------------
+r1840 | Jim-Bim | 2009-05-17 17:09:06 +0000 (Sun, 17 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+AckisRecipeList:
+- fixed a typo in output of ScanSkillLevelData function
+------------------------------------------------------------------------
+r1839 | ackis | 2009-05-17 05:55:12 +0000 (Sun, 17 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+Fix bug with lib qtipclick, and disable the addon for thunderlord people... your alliance warrior nax is a dumbass nigger faggit.
+------------------------------------------------------------------------
+r1838 | ackis | 2009-05-17 03:25:57 +0000 (Sun, 17 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+   M /trunk/Docs/Wowwiki.txt
+
+Add mountain dew game fuel links.
+------------------------------------------------------------------------
+r1837 | pompachomp | 2009-05-16 21:03:10 +0000 (Sat, 16 May 2009) | 5 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Enchant.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+added missing Engineering trainer data, Ticket 569
+added missing Blacksmithing trainer data, Ticket 568
+added missing Enchanting trainer data, Ticket 566
+removed incorrect Enchanting trainer data in the Tailoring database
+removed duplicate trainer data on tailoring items
+------------------------------------------------------------------------
+r1836 | Jim-Bim | 2009-05-16 17:18:03 +0000 (Sat, 16 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+AckisRecipeList:
+- auto focus the copy text frame to be able to copy faster
+------------------------------------------------------------------------
+r1835 | ackis | 2009-05-15 21:06:54 +0000 (Fri, 15 May 2009) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.toc
+   M /trunk/embeds.xml
+
+Embed libqtipclick, add some tt generating functions, etc
+------------------------------------------------------------------------
+r1834 | ackis | 2009-05-15 17:52:25 +0000 (Fri, 15 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+add skeleton stuff for the libqtipclick
+------------------------------------------------------------------------
+r1833 | ackis | 2009-05-15 16:31:11 +0000 (Fri, 15 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLConfig.lua
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+Move expansions from general to obtain all over.
+------------------------------------------------------------------------
+r1832 | Jim-Bim | 2009-05-15 16:29:18 +0000 (Fri, 15 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLConfig.lua
+
+AckisRecipeList:
+- moved original, bc and wotlk filters to the correct place (ace options)
+------------------------------------------------------------------------
+r1831 | ackis | 2009-05-15 16:25:21 +0000 (Fri, 15 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/Locals/testenUS.lua
+
+Make the text for WotLK on the panel just show Lich King to save some text space.
+------------------------------------------------------------------------
+r1830 | ackis | 2009-05-15 01:21:33 +0000 (Fri, 15 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Vendor scanning works kind of, no errors tossed but no real info given out.  Think I need to rethink how I'm doing this.
+------------------------------------------------------------------------
+r1829 | ackis | 2009-05-15 00:35:42 +0000 (Fri, 15 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Inscription.lua
+
+Fix an error where isncription recipe had vendors marked for mob drops.
+------------------------------------------------------------------------
+r1828 | ackis | 2009-05-14 20:53:56 +0000 (Thu, 14 May 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testenUS.lua
+   M /trunk/RecipeDB/ARL-Inscription.lua
+   M /trunk/RecipeDB/ARL-Mob.lua
+
+Update new moon with appropiate flags and acquire info.
+------------------------------------------------------------------------
+r1827 | ackis | 2009-05-14 20:18:50 +0000 (Thu, 14 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Change where tooltip properties are set.
+------------------------------------------------------------------------
+r1826 | ackis | 2009-05-14 19:51:30 +0000 (Thu, 14 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Set teh default anchor of the tt
+------------------------------------------------------------------------
+r1825 | ackis | 2009-05-14 18:15:14 +0000 (Thu, 14 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Add more tooltip scanning functions
+------------------------------------------------------------------------
+r1824 | ackis | 2009-05-14 17:37:49 +0000 (Thu, 14 May 2009) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/ARLDatamine.lua
+
+Do some more tooltip parsing, going to see if I can get this tested out now.
+------------------------------------------------------------------------
+r1823 | ackis | 2009-05-14 16:40:40 +0000 (Thu, 14 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Make the text dump box always default to highlighting everything.
+------------------------------------------------------------------------
+r1822 | ackis | 2009-05-14 01:21:03 +0000 (Thu, 14 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Make vendor scanning work.  Yay?  Also add a check to see if trainer items == 0 because it reports that way at times.
+------------------------------------------------------------------------
+r1821 | ackis | 2009-05-13 22:15:18 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+   M /trunk/ARLFrame.lua
+
+Fix a nil error.
+------------------------------------------------------------------------
+r1820 | ackis | 2009-05-13 21:57:54 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Fix datamine concat issue.
+------------------------------------------------------------------------
+r1819 | ackis | 2009-05-13 21:46:57 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Enchant.lua
+
+Convert some enchanting over, so I can test out tonight.
+------------------------------------------------------------------------
+r1818 | ackis | 2009-05-13 21:29:22 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Smelt.lua
+
+Convert smelting with skill levels, etc.
+------------------------------------------------------------------------
+r1817 | ackis | 2009-05-13 21:17:51 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-FirstAid.lua
+   M /trunk/RecipeDB/ARL-Runeforge.lua
+
+Add skill up info, expansion info, and remove recipe counts (only return one number instead of increasing it for each recipe) for First Aid, Runeforging.
+------------------------------------------------------------------------
+r1816 | ackis | 2009-05-13 21:02:44 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/CHANGES.txt
+   M /trunk/Docs/Datamine.txt
+   M /trunk/Docs/In-game.txt
+   M /trunk/Docs/Wowwiki.txt
+
+Update formatting for all files.
+------------------------------------------------------------------------
+r1815 | Jim-Bim | 2009-05-13 20:24:39 +0000 (Wed, 13 May 2009) | 4 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+AckisRecipeList:
+- added texts to the original, bc and wotlk checkboxes
+- moved these checkboxes to a better ui position
+- removed duplicate wrath common lines from ackis
+------------------------------------------------------------------------
+r1814 | ackis | 2009-05-13 19:47:09 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLConfig.lua
+
+Sometimes I typo when I dry-code... who would've thought?
+------------------------------------------------------------------------
+r1813 | ackis | 2009-05-13 19:35:10 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.toc
+
+Update .toc
+------------------------------------------------------------------------
+r1812 | ackis | 2009-05-13 19:14:36 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLConfig.lua
+   M /trunk/ARLFrame.lua
+   M /trunk/Locals/testenUS.lua
+
+Make GUI options for filtering out the expansions and fix a bug where it was looking in the wrong place for the filter values.
+------------------------------------------------------------------------
+r1811 | ackis | 2009-05-13 18:57:58 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Fix a bug where the wrath common factions weren't being checked per sv's
+------------------------------------------------------------------------
+r1810 | ackis | 2009-05-13 18:42:49 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLDatamine.lua
+
+Make datamining dumps pop-up in a c&p window.
+------------------------------------------------------------------------
+r1809 | ackis | 2009-05-13 18:32:25 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+When we add vendors, trainers, quests to the map/mini-map, only show the ones that are from your faction.
+------------------------------------------------------------------------
+r1808 | ackis | 2009-05-13 18:18:03 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLConfig.lua
+   M /trunk/AckisRecipeList.lua
+
+Add functionality so that you can filter out based on expansion.
+------------------------------------------------------------------------
+r1807 | ackis | 2009-05-13 17:44:54 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+One more tweak to main page.
+------------------------------------------------------------------------
+r1806 | ackis | 2009-05-13 17:42:06 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+   M /trunk/Docs/Wowwiki.txt
+
+Update docs to put IRC link in.
+------------------------------------------------------------------------
+r1805 | ackis | 2009-05-13 16:49:49 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/CHANGES.txt
+   M /trunk/Docs/Documentation.txt
+
+Update change log and docs.
+------------------------------------------------------------------------
+r1804 | ackis | 2009-05-13 16:45:22 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+   M /trunk/Docs/Documentation.txt
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+
+Add support for tracking which expansion the recipe came from (Ticket 295) and also add support for skill level information (Ticket 434).  Information is not in the database so we make some assumption about both of these until the database gets populated.  If a recipes is 300 or below, it's from original wow, if it is 375 or below, it's from BC, 450 or below it's from wrath.  If a recipe does not have skill up information, we assume that orange is 10 points, yellow is 15, green is 20.
+------------------------------------------------------------------------
+r1803 | ackis | 2009-05-13 15:23:15 +0000 (Wed, 13 May 2009) | 1 line
+Changed paths:
+   A /trunk/Docs/Wowwiki.txt
+
+Make seperate doc for Wowwiki, will have to convert remaining pages to Creole.
+------------------------------------------------------------------------
+r1802 | ackis | 2009-05-12 21:45:47 +0000 (Tue, 12 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+Ackis transfered servers again... yes he did.  Server #6 is Thunderlord!!!
+------------------------------------------------------------------------
+r1801 | pompachomp | 2009-05-12 19:29:00 +0000 (Tue, 12 May 2009) | 6 lines
+Changed paths:
+   M /trunk/Docs/Datamine.txt
+   M /trunk/Docs/Main.txt
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+   M /trunk/RecipeDB/ARL-Enchant.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+   M /trunk/RecipeDB/ARL-Inscription.lua
+   M /trunk/RecipeDB/ARL-Leatherwork.lua
+
+added missing Leatherworking trainer data, Ticket 551
+added missing Alchemy trainer data, Ticket 548
+added missing Enchanting trainer data, Ticket 541,553
+added missing Engineering trainer data, Ticket 550
+added missing/extra Inscription trainer data, Ticket 540,552
+fixed some typos in the docs
+------------------------------------------------------------------------
+r1800 | pompachomp | 2009-05-12 03:54:10 +0000 (Tue, 12 May 2009) | 3 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Engineer.lua
+
+added missing engineering trainer data, Ticket 538
+added missing blacksmithing trainer data, Tickets 539,549
+
+------------------------------------------------------------------------
+r1799 | pompachomp | 2009-05-12 03:17:05 +0000 (Tue, 12 May 2009) | 3 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Jewelcraft.lua
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+added missing jewelcrafting trainer data, Ticket 546
+added missing tailoring trainer data, Tickets 542,547
+
+------------------------------------------------------------------------
+r1798 | ackis | 2009-05-11 22:06:30 +0000 (Mon, 11 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Main.txt
+
+Doc update
+------------------------------------------------------------------------
+r1797 | torhal | 2009-05-11 19:38:47 +0000 (Mon, 11 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+In ttAdd(): Renamed wraptext parameter to use_span and added support for it. This makes the 'usage' text at the bottom of the tooltip span both columns, thereby shrinking the overall tooltip size to what it was before the LibQTip addition.
+------------------------------------------------------------------------
+r1796 | Jim-Bim | 2009-05-11 19:37:41 +0000 (Mon, 11 May 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Leatherwork.lua
+
+AckisRecipeList:
+- fixed obtain flags of all Ulduar Leatherworking recipes
+------------------------------------------------------------------------
+r1795 | ackis | 2009-05-11 18:13:05 +0000 (Mon, 11 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Remove unneeded var
+------------------------------------------------------------------------
+r1794 | Jim-Bim | 2009-05-11 18:06:58 +0000 (Mon, 11 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+AckisRecipeList:
+- fixed show exclusion option and use new separate count for progress bar
+------------------------------------------------------------------------
+r1793 | ackis | 2009-05-11 17:46:14 +0000 (Mon, 11 May 2009) | 1 line
+Changed paths:
+   M /trunk/AckisRecipeList.lua
+
+Should copare a name to a name, not a number.
+------------------------------------------------------------------------
+r1792 | ackis | 2009-05-11 17:14:23 +0000 (Mon, 11 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/AckisRecipeList.lua
+
+Implement ticket 534, we now keep track of profession specific exclusions.  Also rewrite the exclusion function to be a bit more better. :P
+------------------------------------------------------------------------
+r1791 | ackis | 2009-05-11 16:53:55 +0000 (Mon, 11 May 2009) | 1 line
+Changed paths:
+   M /trunk/Locals/testenUS.lua
+
+Update locale for: L["CLASS_DESC"]= "Include this class in the scan.  This will filter on two factors: 1) Can the class use the recipe and 2) can the class learn the recipe."
+------------------------------------------------------------------------
+r1790 | ackis | 2009-05-11 16:49:05 +0000 (Mon, 11 May 2009) | 1 line
+Changed paths:
+   M /trunk/Docs/Documentation.txt
+
+Update docs.
+------------------------------------------------------------------------
+r1789 | ackis | 2009-05-11 16:30:59 +0000 (Mon, 11 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Fix Ticket (533) - No error should pop up when you click on the expanded text of the last recipe in this list.
+------------------------------------------------------------------------
+r1788 | Jim-Bim | 2009-05-10 20:58:15 +0000 (Sun, 10 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+   M /trunk/Locals/testenUS.lua
+
+AckisRecipeList:
+- fixed the state of the expand button after doing a search
+------------------------------------------------------------------------
+r1787 | Jim-Bim | 2009-05-10 19:52:19 +0000 (Sun, 10 May 2009) | 2 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+AckisRecipeList:
+- added ui elements which will be used to access saved Alt-Tradeskills
+------------------------------------------------------------------------
+r1786 | pompachomp | 2009-05-10 04:33:21 +0000 (Sun, 10 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+
+added missing blacksmithing trainer data, Ticket 512
+------------------------------------------------------------------------
+r1785 | Jim-Bim | 2009-05-09 12:42:29 +0000 (Sat, 09 May 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+
+AckisRecipeList:
+- added missing Blacksmith Trainer flags (Ticket 513, 517)
+------------------------------------------------------------------------
+r1784 | pompachomp | 2009-05-09 02:31:05 +0000 (Sat, 09 May 2009) | 3 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Blacksmith.lua
+   M /trunk/RecipeDB/ARL-Leatherwork.lua
+
+added missing leatherworking trainer data, Ticket 525
+added missing blacksmithing trainer data, Ticket 517
+added missing blacksmithing trainer data, Ticket 513
+------------------------------------------------------------------------
+r1783 | pompachomp | 2009-05-08 22:08:42 +0000 (Fri, 08 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Tailor.lua
+
+added missing tailoring trainer data, Ticket 509
+------------------------------------------------------------------------
+r1782 | Jim-Bim | 2009-05-08 21:53:34 +0000 (Fri, 08 May 2009) | 3 lines
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+AckisRecipeList:
+- fixed saved frame position problem with expanded frame (Ticket 440)
+- reset frame position option now takes effect without /reloadui
+------------------------------------------------------------------------
+r1781 | pompachomp | 2009-05-08 19:55:49 +0000 (Fri, 08 May 2009) | 2 lines
+Changed paths:
+   M /trunk/RecipeDB/ARL-Alchemy.lua
+   M /trunk/RecipeDB/ARL-Enchant.lua
+
+added missing enchanting trainer data, Ticket 529
+added missing alchemy trainer data, Ticket 530
+------------------------------------------------------------------------
+r1780 | pompachomp | 2009-05-08 17:47:35 +0000 (Fri, 08 May 2009) | 1 line
+Changed paths:
+   M /trunk/RecipeDB/ARL-Enchant.lua
+
+- added missing enchanting trainer data, Ticket 522
+------------------------------------------------------------------------
+r1779 | pompachomp | 2009-05-08 17:15:33 +0000 (Fri, 08 May 2009) | 1 line
+Changed paths:
+   M /trunk/ARLFrame.lua
+
+Testing out this svn client because i r noob according to ackis ;)
+------------------------------------------------------------------------
+r1778 | 8timer | 2009-05-07 06:29:18 +0000 (Thu, 07 May 2009) | 1 line
+Changed paths:
+   M /trunk/embeds.xml
+
+one too many!
+------------------------------------------------------------------------

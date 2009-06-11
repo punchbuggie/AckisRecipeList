@@ -1,0 +1,53 @@
+## Title: Ackis Recipe List (1.0 RC9)
+## Title-koKR: Ackis의 제조법 리스트 (1.0 RC9)
+## Title-deDE: Ackis Rezeptliste (1.0 RC9)
+## X-Curse-Packaged-Version: 1.0RC9
+## X-Curse-Project-Name: Ackis Recipe List
+## X-Curse-Project-ID: arl
+## X-Curse-Repository-ID: wow/arl/mainline
+
+## Notes: Scans your tradeskills and tells you which recipes you are missing, along with information on how to obtain them.
+## Notes-frFR: Analyse vos métiers et vous indique les recettes qui vous manque, ainsi que des informations sur la façon de les obtenir.
+## Notes-deDE: Zeigt eine Liste der Rezepte, die Ihr noch nicht mit eurem Beruf gelernt habt.  Funktioniert mit allen Berufen sowie den klassenspezifischen Berufen.
+## Notes-esES: Muestra una lista de recetas inexistentes para sus Habilidades de Comercio. Funciona con todas las habilidades comerciales, incluidas venenos y entrenamiento de bestias del cazador.
+## Notes-zhCN: 扫描并告知如何获取你所缺失的配方的详细商业技能信息插件。
+## Notes-koKR: 캐릭터가 배우지 못한 제조법을 표시합니다. 또한 제조법의 획득 정보을 알려줍니다.
+
+## Author: Ackis, Zhinjio, Jim-Bim, Torhal, Pompy
+## eMail: ackis AT shaw DOT ca
+## X-Donate: http://www.wowace.com/projects/arl/#w_donations
+
+## Interface: 30100
+## Version: 1.0 RC9 2053
+## X-Revision: 2053
+## X-Date: 2009-06-08T17:01:20Z
+
+## X-Credits: FGWarmonger, Kagaro, Speeddymon, Xinhuan, Aesir, BWMerlin, everyone who translated stuff and more!
+
+## X-Category: Tradeskill
+## X-Localizations: enUS, frFR, zhCN, zhTW, deDE, koKR, esES, esMX, ruRU
+## X-Website: http://www.wowwiki.com/AckisRecipeList/
+## X-Feedback: http://wow.curse.com/downloads/wow-addons/details/arl.aspx
+
+## OptionalDeps: Ace3, LibAboutPanel, LibBetterBlizzOptions-1.0, LibBabble-Zone-3.0, LibBabble-Faction-3.0, LibBabble-Boss-3.0, LibBabble-Class-3.0, LibSharedMedia-3.0, LibQTip-1.0, LibQTipClick-1.1, Skillet, ATSW, Manufac, Cauldron, TomTom, TipTac
+## DefaultState: Enabled
+
+## X-WoWI-ID: 5061
+## SavedVariables: ARLDB2
+
+#@no-lib-strip@
+# Libraries
+embeds.xml
+#@end-no-lib-strip@
+
+# Localization files
+local.xml
+
+AckisRecipeList.lua
+ARLConfig.lua
+ARLFrame.lua
+ARLColour.lua
+ARLDatamine.lua
+
+# Recipe database files
+database.xml
